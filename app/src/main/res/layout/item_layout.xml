@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent"
+    android:padding="@dimen/_4sdp"
+    android:layout_marginBottom="@dimen/_2sdp"
+    >
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/repoName"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="MindOrks" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/repoOwner"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repoName"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="MindOrks" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/repoDesc"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repoOwner"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="MindOrks" />
+</androidx.constraintlayout.widget.ConstraintLayout>
