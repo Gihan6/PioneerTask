@@ -73,18 +73,12 @@ class MainActivity : AppCompatActivity(), ListenerAdapter {
         val mWorkManager = WorkManager.getInstance()
 
         val myConstraints = Constraints.Builder()
-            .setRequiresDeviceIdle(true) //checks whether device should be idle for the WorkRequest to run
-            .setRequiresCharging(true) //checks whether device should be charging for the WorkRequest to run
-            .setRequiredNetworkType(NetworkType.CONNECTED) //checks whether device should have Network Connection
             .setRequiresBatteryNotLow(true) // checks whether device battery should have a specific level to run the work request
             .setRequiresStorageNotLow(true) // checks whether device storage should have a specific level to run the work request
             .build()
 
         val mRequest = PeriodicWorkRequest.Builder(
-            NotificationWorker::class.java, 1,
-            TimeUnit.MINUTES, 1, TimeUnit.MINUTES
-        ).setConstraints(myConstraints).build()
-
+            NotificationWorker::class.java, 1,TimeUnit.HOURS).setConstraints(myConstraints).build()
 
         mWorkManager.enqueueUniquePeriodicWork(
             "workName",
@@ -96,7 +90,7 @@ class MainActivity : AppCompatActivity(), ListenerAdapter {
             .observe(this, Observer { workInfo ->
                 if (workInfo != null) {
                     val state = workInfo.state
-                    if (state.name == "SUCCEEDED") {
+                    if (state.ordinal == 1) {
                         Toast.makeText(this, "Scheduler Refresh", Toast.LENGTH_SHORT).show()
                         refresh()
 
@@ -130,7 +124,6 @@ class MainActivity : AppCompatActivity(), ListenerAdapter {
 
     private fun afterRefresh() {
         swipeRefresh.isRefreshing = false
-
     }
 
     private fun setupUI() {

@@ -27,8 +27,9 @@ class NotificationWorker(appContext: Context, workerParams: WorkerParameters) :
     private fun showNotification() {
         val manager =
             applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        val channelId = "task_channel"
-        val channelName = "task_name"
+        val channelId = "id"
+        val channelName = "refresh"
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel =
                 NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_DEFAULT)
