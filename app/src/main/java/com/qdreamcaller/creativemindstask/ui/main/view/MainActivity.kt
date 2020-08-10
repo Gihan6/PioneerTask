@@ -78,7 +78,8 @@ class MainActivity : AppCompatActivity(), ListenerAdapter {
             .build()
 
         val mRequest = PeriodicWorkRequest.Builder(
-            NotificationWorker::class.java, 1,TimeUnit.HOURS).setConstraints(myConstraints).build()
+            NotificationWorker::class.java, 1, TimeUnit.HOURS
+        ).setConstraints(myConstraints).build()
 
         mWorkManager.enqueueUniquePeriodicWork(
             "workName",
@@ -163,7 +164,9 @@ class MainActivity : AppCompatActivity(), ListenerAdapter {
     }
 
     override fun onLongClick(position: Repo) {
-        showDialog(position)
+        val ft = supportFragmentManager.beginTransaction()
+        val newFragment = DialogOption(position)
+        newFragment.show(ft, "dialog")
     }
 
     private fun showDialog(repo: Repo) {
