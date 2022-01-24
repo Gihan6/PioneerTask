@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), ListenerAdapter {
         setupUI()
         initListenerForViewModel()
         getDataFromServer(currentPage)
-        schedulerWork()
+//        schedulerWork()
         search()
     }
 
@@ -148,7 +148,7 @@ class MainActivity : AppCompatActivity(), ListenerAdapter {
     }
 
     private fun getDataFromServer(page: Int) {
-        progressBar.visibility = View.VISIBLE
+//        progressBar.visibility = View.VISIBLE
         viewModel.getReposFromWebServices(page)
 
     }

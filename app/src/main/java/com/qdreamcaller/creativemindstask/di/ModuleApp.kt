@@ -2,7 +2,7 @@ package com.qdreamcaller.creativemindstask.di
 
 import com.qdreamcaller.creativemindstask.data.api.ApiHelper
 import com.qdreamcaller.creativemindstask.data.api.RetrofitBuilder
-import com.qdreamcaller.creativemindstask.data.repository.MainRepository
+import com.qdreamcaller.creativemindstask.ui.main.repository.MainRepository
 import com.qdreamcaller.creativemindstask.db.DataBase
 import com.qdreamcaller.creativemindstask.ui.main.viewModel.MainViewModel
 

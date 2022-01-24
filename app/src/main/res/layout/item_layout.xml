@@ -1,47 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.cardview.widget.CardView
     android:id="@+id/container"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorAccent"
-    android:padding="@dimen/_4sdp"
-    android:layout_marginBottom="@dimen/_2sdp"
-    >
+    android:layout_margin="@dimen/_4sdp"
+    app:cardCornerRadius="@dimen/_8sdp">
 
-
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/repoName"
-        style="@style/TextAppearance.AppCompat.Large"
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="MindOrks" />
+        android:background="@color/white"
+        android:padding="@dimen/_4sdp">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/repoOwner"
-        style="@style/TextAppearance.AppCompat.Large"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/repoName"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="MindOrks" />
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/repoDesc"
-        style="@style/TextAppearance.AppCompat.Medium"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/repoOwner"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="MindOrks" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/repoName"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="@dimen/_2sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="repoName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/repoOwner"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/repoName"
+            tools:text="repoOwner" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/repoDesc"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/repoOwner"
+            tools:text="repoDesc" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

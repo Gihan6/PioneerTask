@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.view.MainActivity"
     >
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_8sdp"
         android:focusableInTouchMode="true"
-        android:hint="search"
+        android:hint="@string/search"
         android:textSize="@dimen/_15ssp"
         app:layout_constraintTop_toTopOf="parent" />
 

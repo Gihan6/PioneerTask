@@ -9,5 +9,6 @@ import retrofit2.http.Query
 interface ApiService {
 
     @GET("repos")
-    suspend fun getRepo(@Query("page") page:Int,@Query("per_page") per_page:Int): List<RepoResponse>
+    suspend fun getRepo(@Query("page") page:Int,@Query("per_page") per_page:Int):
+            List<RepoResponse>
 }

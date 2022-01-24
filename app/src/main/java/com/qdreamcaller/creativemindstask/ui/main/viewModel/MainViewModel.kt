@@ -4,7 +4,7 @@ package com.qdreamcaller.creativemindstask.ui.main.viewModel
 import androidx.lifecycle.*
 import com.qdreamcaller.creativemindstask.data.networkModel.response.RepoResponse
 
-import com.qdreamcaller.creativemindstask.data.repository.MainRepository
+import com.qdreamcaller.creativemindstask.ui.main.repository.MainRepository
 import com.qdreamcaller.creativemindstask.model.Repo
 import com.qdreamcaller.creativemindstask.util.Resource
 import kotlinx.coroutines.launch

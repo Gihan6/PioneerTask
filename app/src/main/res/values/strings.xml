@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CreativeMindsTask</string>
+    <string name="app_name">Pioneer Task</string>
+    <string name="search">search</string>
 </resources>

@@ -1,7 +1,6 @@
-package com.qdreamcaller.creativemindstask.data.repository
+package com.qdreamcaller.creativemindstask.ui.main.repository
 
 import android.util.Log
-import androidx.lifecycle.MutableLiveData
 import com.qdreamcaller.creativemindstask.data.api.ApiHelper
 import com.qdreamcaller.creativemindstask.db.DataBase
 import com.qdreamcaller.creativemindstask.model.Repo
@@ -10,7 +9,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.koin.core.KoinComponent
 import org.koin.core.inject
-import org.koin.experimental.property.inject
 
 
 class MainRepository(private val apiHelper: ApiHelper) : KoinComponent {
